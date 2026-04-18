@@ -69,10 +69,14 @@
         color: orange;
         font-weight: bold;
       }
+    .lang-btn-wrapper {
+      position: relative;
+      height: 0;
+    }
     .lang-btn {
-      position: fixed;
+      position: absolute;
       top: 15px;
-      right: 20px;
+      right: 0;
       background: none;
       border: 1.5px solid #1772d0;
       color: #1772d0;
@@ -95,11 +99,6 @@
       margin-left: 0 !important;
     }
     @media (max-width: 600px) {
-      .lang-btn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-      }
       .name-column .name-title-wrapper {
         margin-top: 40px;
       }
@@ -143,8 +142,10 @@
 </head>
 
 <body>
-  <button class="lang-btn" id="lang-toggle">Korean</button>
   <div class="container">
+    <div class="lang-btn-wrapper">
+      <button class="lang-btn" id="lang-toggle">Korean</button>
+    </div>
     <div class="row" style="margin-top: 10px;">
       <div class="col-sm-4 name-column" style="min-width: 266px;">
         <p class="name-title-wrapper" style="text-align:left">
@@ -440,7 +441,7 @@
     <div class="row">
       <div class="col">
         <p style="text-align:right;font-size:small;" data-i18n="footer">
-          Template based on <a href="https://joonleesky.github.io/">Hojoon Lee's website</a>.
+          Template based on <a href="https://isaac7778.github.io/">Isaac Han's website</a>.
         </p>
       </div>
     </div>
@@ -458,7 +459,7 @@
         'exp-gist-thesis': 'Thesis: Activation by Interval-wise Dropout (Advisor: <a href="https://cilab.gist.ac.kr/hp/current-member/">Kyung-Joong Kim</a>)',
         'exp-ssu-school': 'Soongsil University',
         'exp-ssu-degree': 'B.S. in Software / Mathematics (GPA: 4.26 / 4.5)',
-        'footer': 'Template based on <a href="https://joonleesky.github.io/">Hojoon Lee\'s website</a>.',
+        'footer': 'Template based on <a href="https://isaac7778.github.io/">Isaac Han\'s website</a>.',
         'summary-btn': 'summary',
         'summary-pokeagent': 'This paper reflects on our experience in the PokeAgent Challenge, a competition for building Pokémon battle agents. I participated as part of Team 4thLesson, which won second place in Track 1: Battling (Gen1OU). We fine-tuned the provided offline RL model by changing the activation function (LReLU → <a href="https://proceedings.mlr.press/v267/park25b.html">AID</a>), replacing the optimizer (AdamW → <a href="https://arxiv.org/abs/2506.15544">Kron</a>), and redesigning the self-play data collection strategy. Further technical details are available in Appendix E.1.3.',
         'summary-scotti': 'We propose SCOTTI, a unified model that jointly predicts 3D human pose, action category, and action progress from foot pressure signals. Instead of learning these three related tasks separately, SCOTTI learns them through a shared representation, leading to improved performance and a richer understanding of human motion from tactile signals alone. We also built a large-scale tactile-visual dataset from 15 participants and showed that this approach generalizes effectively across diverse actions and unseen subjects.',
@@ -477,7 +478,7 @@
         'exp-gist-thesis': '졸업 논문: Activation by Interval-wise Dropout (지도 교수: <a href="https://cilab.gist.ac.kr/hp/current-member/">김경중</a>)',
         'exp-ssu-school': '숭실대학교',
         'exp-ssu-degree': '소프트웨어학부 / 수학과 학사 (GPA: 4.26 / 4.5)',
-        'footer': '<a href="https://joonleesky.github.io/">Hojoon Lee</a>의 웹사이트를 기반으로 제작되었습니다.',
+        'footer': '<a href="https://isaac7778.github.io/">한이삭님의 웹사이트</a>를 기반으로 제작되었습니다.',
         'summary-btn': 'summary',
         'summary-pokeagent': 'Pokemon agent를 만드는 대회인 Pokeagent Challenge에 대한 회고 논문입니다. 저는 4thLesson이라는 팀으로 참석하여 Track1: Battling (Gen1OU) 부문 2위를 수상했습니다. 저희 팀은 주어진 Offline RL 모델을 activation function (LReLU → <a href="https://proceedings.mlr.press/v267/park25b.html">AID</a>), optimizer (AdamW → <a href="https://arxiv.org/abs/2506.15544">Kron</a>), self-play를 위한 데이터 수집 전략을 수정하여 fine-tuning하였으며, 자세한 내용은 해당 논문의 Appendix E.1.3 부분을 참고하시길 바랍니다.',
         'summary-scotti': '발 압력 신호로부터 사람의 3D 자세, 동작 종류, 그리고 동작이 얼마나 진행되었는지를 하나의 모델로 함께 예측하는 SCOTTI를 제안했습니다. 서로 관련된 세 task를 따로 학습하는 대신 shared representation으로 함께 학습해 성능을 높였고, 촉각 신호만으로도 사람의 움직임을 더 풍부하게 이해할 수 있음을 보였습니다. 또한 15명 규모의 대규모 tactile-visual 데이터를 직접 구축해, 이 방식이 다양한 동작과 unseen subject에도 효과적임을 검증했습니다.',
