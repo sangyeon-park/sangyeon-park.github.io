@@ -1,0 +1,565 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157941252-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-157941252-1');
+  </script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+  <meta http-equiv="Pragma" content="no-cache"/>
+  <meta http-equiv="Expires" content="0"/>
+
+  <title>Sangyeon Park</title>
+
+  <meta name="author" content="Sangyeon Park">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <!-- <link rel="icon" type="image/png" href="pictures/personal_round.png"> -->
+
+  <style>
+    .publication-filter {
+      display: block;
+      margin-left: 0;
+      margin-top: 5px;
+    }
+    .filter-btn {
+      background: none;
+      border: none;
+      color: #1772d0;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 0 5px;
+      font-family: inherit;
+    }
+    .filter-btn:hover {
+      text-decoration: none;
+      color: orange;
+    }
+    .filter-btn.active {
+      color: #1772d0;
+      font-weight: bold;
+    }
+    .publication-entry {
+      transition: opacity 0.3s ease, height 0.3s ease;
+    }
+    .publication-entry.hidden {
+      display: none;
+    }
+    /* Style for the Simba GIF to crop the top */
+    .paper-images {
+      width: 100%;
+      height: auto;
+    }
+    .cropped-gif {
+      width: 100%;
+      clip-path: inset(20% 0 20% 0);
+    }
+    .spotlight {
+        color: orange;
+        font-weight: bold;
+      }
+    .lang-btn {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      background: none;
+      border: 1.5px solid #1772d0;
+      color: #1772d0;
+      cursor: pointer;
+      font-size: 13px;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-family: inherit;
+      z-index: 1000;
+      transition: background 0.2s, color 0.2s;
+    }
+    .lang-btn:hover {
+      background: #1772d0;
+      color: white;
+    }
+    .name-title-wrapper {
+      text-align: left !important;
+    }
+    .row > .name-column:first-child {
+      margin-left: 0 !important;
+    }
+    @media (max-width: 600px) {
+      .lang-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+      .name-column .name-title-wrapper {
+        margin-top: 40px;
+      }
+    }
+    .summary-toggle {
+      background: none;
+      border: none;
+      color: #1772d0;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 0;
+      font-family: inherit;
+    }
+    .summary-toggle:hover {
+      color: #f09228;
+      text-decoration: none;
+    }
+    .summary-toggle::before {
+      content: "▸ ";
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+    .summary-toggle.open::before {
+      transform: rotate(90deg);
+    }
+    .summary-content {
+      display: none;
+      margin-top: 6px;
+      padding: 8px 12px;
+      background-color: #f7f7f7;
+      border-left: 3px solid #1772d0;
+      font-size: 13px;
+      color: #444;
+      line-height: 1.5;
+    }
+    .summary-content.open {
+      display: block;
+    }
+  </style>
+
+</head>
+
+<body>
+  <button class="lang-btn" id="lang-toggle">Korean</button>
+  <div class="container">
+    <div class="row" style="margin-top: 10px;">
+      <div class="col-sm-4 name-column" style="min-width: 266px;">
+        <p class="name-title-wrapper" style="text-align:left">
+          <name style="white-space: nowrap;">Sangyeon Park (박상연)</name>
+        </p>
+      </div>
+      <div class="col-sm-8 name-column text-right" style="min-width: 266px; margin-top: 10px">
+      </div>
+    </div>
+    <div class="row common-rows">
+
+      <div class="col-xs-12 col-sm-8 personal-column">
+        <p data-i18n="bio-1">
+            I completed my M.S. in AI at <a href="https://ai.gist.ac.kr/aieng/index.do">GIST</a>, advised by <a href="https://cilab.gist.ac.kr/hp/current-member/">Prof. Kyung-Joong Kim</a>.
+        </p>
+        <p data-i18n="bio-2">
+            My research has focused on ‘Plasticity Loss’ — the phenomenon where a model’s adaptability degrades when learning new data distributions during training. I have conducted research from the perspectives of reinitialization (FIRE), activation functions (AID), and weight regularization (SWR), and implemented and validated evaluation code across various continual learning and reinforcement learning benchmarks.
+        </p>
+        <p data-i18n="bio-3">
+            Please feel free to reach out for research collaborations, career opportunities, or any other questions!
+        </p>
+        <p style="text-align:center">
+          <a href="mailto:tkddus0421@gmail.com">Email</a> &nbsp/&nbsp
+          CV (<a href="data/cv_eng.pdf">Eng</a> / <a href="data/cv_kor.pdf">Kor</a>) &nbsp/&nbsp
+          <a href="https://scholar.google.com/citations?user=fMTWOWMAAAAJ">Google Scholar</a> &nbsp/&nbsp
+          <a href="https://www.linkedin.com/in/sangyeon-park-rl/">LinkedIn</a> &nbsp/&nbsp
+          <a href="https://github.com/sangyeon-park">Github</a>
+        </p>
+
+      </div>
+      <div class="col-xs-12 col-sm-4 personal-column" style="margin-top: 10px">
+        <img alt="profile photo" src="pictures/profile.jpg" class="personal-photo">
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="container">
+    <div class="row section-heading-rows">
+      <h5>News</h5>
+    </div>
+    <div class="row common-rows">
+      <div class="col-xs-3 col-sm-2" style="font-weight:bold; text-align:right;">
+        2026.03.11
+      </div>
+      <div class="col-xs-9 col-sm-10">
+        contents in here...      </div>
+    </div>
+  </div> -->
+
+
+  <div class="container">
+    <div class="row section-heading-rows">
+      <h5>Publications</h5>
+    </div>
+    <div class="publication-filter" style="margin-top:-1%">
+      <a href="javascript:void(0)" class="filter-btn active" data-filter="selected">Selected</a> /
+      <a href="javascript:void(0)" class="filter-btn" data-filter="all">All</a>
+    </div>
+
+    <div class="row common-rows publication-entry" style="margin-top: 4%">
+      <div class="col-xs-12 custom-col-sm-3 left-column">
+          <img src="pictures/PokeAgent_Challenge.png" class="paper-images">
+      </div>
+      <div class="col-xs-12 col-sm-9 right-column" style="margin-top: -1%"">
+        <br>
+        <papertitle>
+        The Pokeagent Challenge: Competitive and Long-Context Learning at Scale
+        </papertitle>
+        <br>
+        <a href="https://sethkarten.ai/">Seth Karten</a>*,
+        <a href="https://jakegrigsby.github.io/">Jake Grigsby</a>*,
+        ..., <strong>Sangyeon Park</strong>,
+        ..., Chi Jin.
+        <br>
+        <em>Preprint '26</em>
+        <br>
+        <a href="https://arxiv.org/abs/2603.15563">paper</a> /
+        <a href="https://pokeagent.github.io/">challenge</a> /
+        <a href="javascript:void(0)" class="summary-toggle" data-i18n="summary-btn">summary</a>
+        <div class="summary-content" data-i18n="summary-pokeagent">
+          This paper reflects on our experience in the PokeAgent Challenge, a competition for building Pokémon battle agents. I participated as part of Team 4thLesson, which won second place in Track 1: Battling (Gen1OU). We fine-tuned the provided offline RL model by changing the activation function (LReLU → <a href="https://proceedings.mlr.press/v267/park25b.html">AID</a>), replacing the optimizer (AdamW → <a href="https://arxiv.org/abs/2506.15544">Kron</a>), and redesigning the self-play data collection strategy. Further technical details are available in Appendix E.1.3.
+        </div>
+        <br><br>
+      </div>
+    </div>
+
+    <div class="row common-rows publication-entry" style="margin-top: 4%">
+      <div class="col-xs-12 custom-col-sm-3 left-column">
+          <img src="pictures/preprint2026scotti.png" class="paper-images">
+      </div>
+      <div class="col-xs-12 col-sm-9 right-column" style="margin-top: -1%"">
+        <br>
+        <papertitle>
+        Shared Representation for 3D Pose Estimation, Action Classification, and Progress Prediction from Tactile Signals
+        </papertitle>
+        <br>
+        <a href="https://isaac7778.github.io/">Isaac Han</a>,
+        <a href="https://wiadiwon.github.io/">Seoyoung Lee</a>,
+        <strong>Sangyeon Park</strong>,
+        <a href="https://scholar.google.com/citations?user=VpxdzgMAAAAJ&hl=ko&oi=ao">Ecehan Akan</a>,
+        <a href="https://yyueluo.com/">Yiyue Luo</a>,
+        <a href="https://www.josephdelpreto.com/">Joseph DelPreto</a>,
+        <a href="https://cilab.gist.ac.kr/hp/">Kyung-Joong Kim</a>.
+        <br>
+        <em>Preprint '26</em>
+        <br>
+        <a href="https://arxiv.org/pdf/2603.25906">paper</a> /
+        <a href="javascript:void(0)" class="summary-toggle" data-i18n="summary-btn">summary</a>
+        <div class="summary-content" data-i18n="summary-scotti">
+          We propose SCOTTI, a unified model that jointly predicts 3D human pose, action category, and action progress from foot pressure signals. Instead of learning these three related tasks separately, SCOTTI learns them through a shared representation, leading to improved performance and a richer understanding of human motion from tactile signals alone. We also built a large-scale tactile-visual dataset from 15 participants and showed that this approach generalizes effectively across diverse actions and unseen subjects.
+        </div>
+        <br><br>
+      </div>
+    </div>
+
+    <div class="row common-rows selected-publication" style="margin-top: 0%">
+        <div class="col-xs-12 custom-col-sm-3 left-column">
+            <img src="pictures/iclr2026fire.png" class="paper-images">
+        </div>
+      <div class="col-xs-12 col-sm-9 right-column" alt="preprint2025rda" style="margin-top: -1%"">
+        <!--
+        <span style="background-color:#e2c7e5">Reinforcement Learning</span>
+        <span style="background-color:#fcdf8e">Robotics</span>
+        -->
+        <br>
+        <papertitle>
+        FIRE: Frobenius-Isometry Reinitialization for Balancing the Stability–Plasticity Tradeoff
+        </papertitle>
+        <br>
+        <a href="https://isaac7778.github.io/">Isaac Han</a>,
+        <strong>Sangyeon Park</strong>,
+        <a href="https://scholar.google.com/citations?user=aFgeYz0AAAAJ&hl=ko&oi=sra">Seungwon Oh</a>,
+        <a href="https://i-am-proto.github.io/">Donghu Kim</a>,
+        <a href="https://joonleesky.github.io/">Hojoon Lee<sup>†</sup></a>,
+        <a href="https://cilab.gist.ac.kr/hp/current-member/">Kyung-Joong Kim<sup>†</sup></a>
+        <br>
+        <em>ICLR '26, <b style="color:#E46060">Oral</b></em>
+        <br>
+        <a href="https://isaac7778.github.io/fire">project page</a> / <a href="https://arxiv.org/abs/2602.08040">paper</a> / <a href="https://github.com/isaac7778/FIRE">code</a> /
+        <a href="javascript:void(0)" class="summary-toggle" data-i18n="summary-btn">summary</a>
+        <div class="summary-content" data-i18n="summary-fire">
+          Existing reinitialization methods are often sensitive to hyperparameters: weak resets limit adaptation to new data, while strong resets can erase previously learned knowledge. We propose FIRE (Frobenius-Isometry REinitialization), a method that theoretically addresses the stability–plasticity tradeoff. FIRE also showed robust performance without hyperparameter tuning across a variety of settings with shifting data distributions, including vision, language, and reinforcement learning.
+        </div>
+        <br><br>
+        <!--
+        <p style="margin-top: -1%;">
+            Introduce champion-level vision-based RL agent in GranTurismo 7!
+        </p>
+        -->
+      </div>
+    </div>
+
+    <div class="row common-rows selected-publication" style="margin-top: 0%">
+        <div class="col-xs-12 custom-col-sm-3 left-column">
+            <img src="pictures/icml2025aid.png" class="paper-images">
+        </div>
+      <div class="col-xs-12 col-sm-9 right-column" alt="preprint2025rda" style="margin-top: -1%"">
+        <!--
+        <span style="background-color:#e2c7e5">Reinforcement Learning</span>
+        <span style="background-color:#fcdf8e">Robotics</span>
+        -->
+        <br>
+        <papertitle>
+        Activation by Interval-wise Dropout: A Simple Way to Prevent Neural Networks from Plasticity Loss
+        </papertitle>
+        <br>
+        <strong>Sangyeon Park</strong>,
+        <a href="https://isaac7778.github.io/">Isaac Han</a>,
+        <a href="https://scholar.google.com/citations?user=aFgeYz0AAAAJ&hl=ko&oi=sra">Seungwon Oh</a>,
+        <a href="https://cilab.gist.ac.kr/hp/current-member/">Kyung-Joong Kim</a>
+        <br>
+        <em>ICML '25</em>
+        <br>
+        <a href="https://proceedings.mlr.press/v267/park25b.html">paper</a> /
+        <a href="javascript:void(0)" class="summary-toggle" data-i18n="summary-btn">summary</a>
+        <div class="summary-content" data-i18n="summary-aid">
+          We investigate the hypothesis that Dropout can worsen Plasticity Loss, and propose AID (Activation by Interval-wise Dropout), which addresses this issue by integrating the idea into the activation function itself. We theoretically show that AID injects linearity into the model, and demonstrate that it preserves plasticity more effectively than existing baselines across a range of continual learning and reinforcement learning settings.<br><br>Note. This paper is currently affected by a Google Scholar indexing issue, where it has been incorrectly merged with <a href="https://parksimon0808.github.io/">Simon Park</a>&rsquo;s <a href="https://proceedings.mlr.press/v267/park25j.html">Generalizing from SIMPLE to HARD Visual Reasoning: Can We Mitigate Modality Imbalance in VLMs?</a> and <a href="https://seohong.me/">Seohong Park</a>&rsquo;s <a href="https://proceedings.mlr.press/v267/park25f.html">Flow Q-Learning</a>.
+        </div>
+        <br><br>
+        <!--
+        <p style="margin-top: -1%;">
+            Introduce champion-level vision-based RL agent in GranTurismo 7!
+        </p>
+        -->
+      </div>
+    </div>
+
+    <div class="row common-rows publication-entry selected-publication" style="margin-top: 4%">
+      <div class="col-xs-12 custom-col-sm-3 left-column">
+          <img src="pictures/SWR.png" class="paper-images">
+      </div>
+      <div class="col-xs-12 col-sm-9 right-column" style="margin-top: -1%"">
+        <br>
+        <papertitle>
+        Recovering Plasticity of Neural Networks via Soft Weight Rescaling
+        </papertitle>
+        <br>
+        <a href="https://scholar.google.com/citations?user=aFgeYz0AAAAJ&hl=ko&oi=sra">Seungwon Oh</a>*,
+        <strong>Sangyeon Park*</strong>,
+        <a href="https://isaac7778.github.io/">Isaac Han</a>,
+        <a href="https://cilab.gist.ac.kr/hp/current-member/">Kyung-Joong Kim</a>.
+        <br>
+        <em>Preprint '24</em>
+        <br>
+        <a href="https://arxiv.org/abs/2507.04683">paper</a> /
+        <a href="javascript:void(0)" class="summary-toggle" data-i18n="summary-btn">summary</a>
+        <div class="summary-content" data-i18n="summary-swr">
+          While Plasticity Loss can arise from multiple factors, one major cause that has been identified is unbounded weight norm growth. To mitigate this issue, we propose a weight regularization method called SWR (Soft Weight Rescaling) and validate it in continual learning settings. SWR was especially effective at preserving plasticity in large vision models such as VGG-16.
+        </div>
+        <br><br>
+      </div>
+    </div>
+
+    <div class="row common-rows publication-entry" style="margin-top: 4%">
+      <div class="col-xs-12 custom-col-sm-3 left-column">
+          <img src="pictures/smart_insole.png" class="paper-images">
+      </div>
+      <div class="col-xs-12 col-sm-9 right-column" style="margin-top: -1%"">
+        <br>
+        <papertitle>
+        Smart Insole: Predicting 3D Human Pose from Foot Pressure
+        </papertitle>
+        <br>
+        <a href="https://isaac7778.github.io/">Isaac Han</a>,
+        <a href="https://wiadiwon.github.io/">Seoyoung Lee</a>,
+        <strong>Sangyeon Park</strong>,
+        <a href="https://scholar.google.com/citations?user=VpxdzgMAAAAJ&hl=ko&oi=ao">Ecehan Akan</a>,
+        <a href="https://yyueluo.com/">Yiyue Luo</a>,
+        <a href="https://cilab.gist.ac.kr/hp/current-member/">Kyung-Joong Kim</a>.
+        <br>
+        <em>NeurIPS '24 (Workshop on Touch Processing: From Data to Knowledge)</em>
+        <br>
+        <a href="https://openreview.net/pdf?id=DX8C7rAi7O">paper</a> /
+        <a href="javascript:void(0)" class="summary-toggle" data-i18n="summary-btn">summary</a>
+        <div class="summary-content" data-i18n="summary-smart-insole">
+          We propose a method for predicting 3D human pose using only foot pressure data. While previous tactile pose estimation approaches were often limited to fixed sensing environments such as floor-mounted sensors, we implemented the system in the form of wireless smart insoles, enabling use without spatial constraints. Using real-world foot pressure data paired with vision-based labels, we show that smart insoles alone can estimate human pose and movement with strong accuracy.
+        </div>
+        <br><br>
+      </div>
+    </div>
+
+    <div style="font-size:12px; color:#777; margin-top:4px;">
+      *: Equal contribution
+    </div>
+    <div style="font-size:12px; color:#777; margin-top:4px;">
+      &dagger;: Equal advising
+    </div>
+
+
+
+  <div class="container">
+    <div class="row section-heading-rows" style="margin-left:-4%; margin-top:6%">
+      <h5 style="z-index:2;" data-i18n="section-experiences">Experiences</h5>
+    </div>
+
+    <div class="row common-rows" style="margin-left:-3.5%">
+      <div class="col-xs-12 custom-col-sm-3 left-column">
+        <img src="pictures/logo_GIST.jpg" class="paper-images" alt="GIST">
+      </div>
+      <div class="col-xs-12 col-sm-9 right-column">
+        <div style="display:flex; justify-content:space-between; align-items:baseline;">
+          <strong data-i18n="exp-gist-school">GIST (Gwangju Institute of Science and Technology)</strong>
+          <span style="color:#555; font-size:13px; white-space:nowrap;">2023.09 – 2026.02</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:baseline;">
+          <span data-i18n="exp-gist-degree">M.S. in AI Convergence (GPA: 4.08 / 4.5)</span>
+          <span style="color:#777; font-size:13px; white-space:nowrap;">Gwangju, Korea</span>
+        </div>
+        <div style="margin-top:3px;">
+          <span data-i18n="exp-gist-thesis">Thesis: Activation by Interval-wise Dropout (Advisor: <a href="https://cilab.gist.ac.kr/hp/current-member/">Kyung-Joong Kim</a>)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row common-rows" style="margin-left:-3.5%; margin-top:3%">
+      <div class="col-xs-12 custom-col-sm-3 left-column">
+        <img src="pictures/logo_SSU.jpg" class="paper-images" alt="Soongsil University">
+      </div>
+      <div class="col-xs-12 col-sm-9 right-column">
+        <div style="display:flex; justify-content:space-between; align-items:baseline;">
+          <strong data-i18n="exp-ssu-school">Soongsil University</strong>
+          <span style="color:#555; font-size:13px; white-space:nowrap;">2017.03 – 2023.02</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:baseline;">
+          <span data-i18n="exp-ssu-degree">B.S. in Software / Mathematics (GPA: 4.26 / 4.5)</span>
+          <span style="color:#777; font-size:13px; white-space:nowrap;">Seoul, Korea</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p style="text-align:right;font-size:small;" data-i18n="footer">
+          Template based on <a href="https://joonleesky.github.io/">Hojoon Lee's website</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const translations = {
+      en: {
+        'bio-1': 'I completed my M.S. in AI at <a href="https://ai.gist.ac.kr/aieng/index.do">GIST</a>, advised by <a href="https://cilab.gist.ac.kr/hp/current-member/">Prof. Kyung-Joong Kim</a>.',
+        'bio-2': 'My research has focused on \'Plasticity Loss\' — the phenomenon where a model\'s adaptability degrades when learning new data distributions during training. I have conducted research from the perspectives of reinitialization (FIRE), activation functions (AID), and weight regularization (SWR), and implemented and validated evaluation code across various continual learning and reinforcement learning benchmarks.',
+        'bio-3': 'Please feel free to reach out for research collaborations, career opportunities, or any other inquiries!',
+        'section-experiences': 'Experiences',
+        'exp-gist-school': 'GIST (Gwangju Institute of Science and Technology)',
+        'exp-gist-degree': 'M.S. in AI Convergence (GPA: 4.08 / 4.5)',
+        'exp-gist-thesis': 'Thesis: Activation by Interval-wise Dropout (Advisor: <a href="https://cilab.gist.ac.kr/hp/current-member/">Kyung-Joong Kim</a>)',
+        'exp-ssu-school': 'Soongsil University',
+        'exp-ssu-degree': 'B.S. in Software / Mathematics (GPA: 4.26 / 4.5)',
+        'footer': 'Template based on <a href="https://joonleesky.github.io/">Hojoon Lee\'s website</a>.',
+        'summary-btn': 'summary',
+        'summary-pokeagent': 'This paper reflects on our experience in the PokeAgent Challenge, a competition for building Pokémon battle agents. I participated as part of Team 4thLesson, which won second place in Track 1: Battling (Gen1OU). We fine-tuned the provided offline RL model by changing the activation function (LReLU → <a href="https://proceedings.mlr.press/v267/park25b.html">AID</a>), replacing the optimizer (AdamW → <a href="https://arxiv.org/abs/2506.15544">Kron</a>), and redesigning the self-play data collection strategy. Further technical details are available in Appendix E.1.3.',
+        'summary-scotti': 'We propose SCOTTI, a unified model that jointly predicts 3D human pose, action category, and action progress from foot pressure signals. Instead of learning these three related tasks separately, SCOTTI learns them through a shared representation, leading to improved performance and a richer understanding of human motion from tactile signals alone. We also built a large-scale tactile-visual dataset from 15 participants and showed that this approach generalizes effectively across diverse actions and unseen subjects.',
+        'summary-fire': 'Existing reinitialization methods are often sensitive to hyperparameters: weak resets limit adaptation to new data, while strong resets can erase previously learned knowledge. We propose FIRE (Frobenius-Isometry REinitialization), a method that theoretically addresses the stability–plasticity tradeoff. FIRE also showed robust performance without hyperparameter tuning across a variety of settings with shifting data distributions, including vision, language, and reinforcement learning.',
+        'summary-aid': 'We investigate the hypothesis that Dropout can worsen Plasticity Loss, and propose AID (Activation by Interval-wise Dropout), which addresses this issue by integrating the idea into the activation function itself. We theoretically show that AID injects linearity into the model, and demonstrate that it preserves plasticity more effectively than existing baselines across a range of continual learning and reinforcement learning settings.<br><br>Note. This paper is currently affected by a Google Scholar indexing issue, where it has been incorrectly merged with <a href="https://parksimon0808.github.io/">Simon Park</a>\u2019s <a href="https://proceedings.mlr.press/v267/park25j.html">Generalizing from SIMPLE to HARD Visual Reasoning: Can We Mitigate Modality Imbalance in VLMs?</a> and <a href="https://seohong.me/">Seohong Park</a>\u2019s <a href="https://proceedings.mlr.press/v267/park25f.html">Flow Q-Learning</a>.',
+        'summary-swr': 'While Plasticity Loss can arise from multiple factors, one major cause that has been identified is unbounded weight norm growth. To mitigate this issue, we propose a weight regularization method called SWR (Soft Weight Rescaling) and validate it in continual learning settings. SWR was especially effective at preserving plasticity in large vision models such as VGG-16.',
+        'summary-smart-insole': 'We propose a method for predicting 3D human pose using only foot pressure data. While previous tactile pose estimation approaches were often limited to fixed sensing environments such as floor-mounted sensors, we implemented the system in the form of wireless smart insoles, enabling use without spatial constraints. Using real-world foot pressure data paired with vision-based labels, we show that smart insoles alone can estimate human pose and movement with strong accuracy.',
+      },
+      ko: {
+        'bio-1': '저는 <a href="https://cilab.gist.ac.kr/hp/current-member/">김경중</a> 교수님의 지도를 받아 <a href="https://ai.gist.ac.kr/aieng/index.do">GIST AI</a> 석사를 졸업하였습니다.',
+        'bio-2': '모델이 학습 과정에서 변화하는 데이터 분포를 학습할 때 적응력이 감소하는 현상인 \'Plasticity Loss (가소성 손실)\'를 주제로 연구해왔습니다. Reinitialization (FIRE), activation function (AID), weight regularization (SWR) 관점에서 각각 연구를 진행하였으며, 다양한 continual learning 및 reinforcement learning 환경에서 이를 평가하는 코드를 구현 및 검증하였습니다.',
+        'bio-3': '공동 연구나 포지션 제안, 또는 기타 궁금한 점이 있으시다면 언제든 편하게 연락해 주시길 바랍니다.',
+        'section-experiences': 'Experiences',
+        'exp-gist-school': 'GIST (광주과학기술원)',
+        'exp-gist-degree': 'AI융합학과 석사 (GPA: 4.08 / 4.5)',
+        'exp-gist-thesis': '졸업 논문: Activation by Interval-wise Dropout (지도 교수: <a href="https://cilab.gist.ac.kr/hp/current-member/">김경중</a>)',
+        'exp-ssu-school': '숭실대학교',
+        'exp-ssu-degree': '소프트웨어학부 / 수학과 학사 (GPA: 4.26 / 4.5)',
+        'footer': '<a href="https://joonleesky.github.io/">Hojoon Lee</a>의 웹사이트를 기반으로 제작되었습니다.',
+        'summary-btn': 'summary',
+        'summary-pokeagent': 'Pokemon agent를 만드는 대회인 Pokeagent Challenge에 대한 회고 논문입니다. 저는 4thLesson이라는 팀으로 참석하여 Track1: Battling (Gen1OU) 부문 2위를 수상했습니다. 저희 팀은 주어진 Offline RL 모델을 activation function (LReLU → <a href="https://proceedings.mlr.press/v267/park25b.html">AID</a>), optimizer (AdamW → <a href="https://arxiv.org/abs/2506.15544">Kron</a>), self-play를 위한 데이터 수집 전략을 수정하여 fine-tuning하였으며, 자세한 내용은 해당 논문의 Appendix E.1.3 부분을 참고하시길 바랍니다.',
+        'summary-scotti': '발 압력 신호로부터 사람의 3D 자세, 동작 종류, 그리고 동작이 얼마나 진행되었는지를 하나의 모델로 함께 예측하는 SCOTTI를 제안했습니다. 서로 관련된 세 task를 따로 학습하는 대신 shared representation으로 함께 학습해 성능을 높였고, 촉각 신호만으로도 사람의 움직임을 더 풍부하게 이해할 수 있음을 보였습니다. 또한 15명 규모의 대규모 tactile-visual 데이터를 직접 구축해, 이 방식이 다양한 동작과 unseen subject에도 효과적임을 검증했습니다.',
+        'summary-fire': '기존 재초기화 기법은 하이퍼파라미터에 민감하여, 약한 리셋은 새 데이터에 대한 적응력이 적고, 강한 리셋은 기존의 지식을 잃는 trade-off가 존재했습니다. 가소성과 안정성의 균형을 이론적으로 해결한 FIRE (Frobenius-Isometry REinitialization)를 제시하며, 학습 중 데이터 분포가 바뀌는 여러 세팅 (Vision, Language, RL)에서도 하이퍼파라미터 없이 견고한 모습을 보였습니다.',
+        'summary-aid': 'Dropout 기법은 Plasticity Loss를 악화시킬 수 있음을 가설을 통해 검증하며, 이를 활성화 함수와 통합시켜 해결한 AID (Activation by Interval-wise Dropout)를 제안합니다. AID는 모델에 선형성을 주입함을 이론적으로 검증하며, 여러 continual learning 및 RL 환경에서 기존에 제시된 baseline 방법들에 비해 효과적으로 가소성을 유지함을 보였습니다.<br><br>Note. 현재 Google Scholar 상에서 이 논문이 <a href="https://parksimon0808.github.io/">Simon Park</a> 님의 <a href="https://proceedings.mlr.press/v267/park25j.html">Generalizing from SIMPLE to HARD Visual Reasoning: Can We Mitigate Modality Imbalance in VLMs?</a> 및 <a href="https://seohong.me/">Seohong Park</a> 님의 <a href="https://proceedings.mlr.press/v267/park25f.html">Flow Q-Learning</a>과 잘못 병합되어 있는 이슈가 있으니, 참고 부탁드립니다.',
+        'summary-swr': 'Plasticity Loss의 원인은 여러가지가 있지만 그 중 주요 원인 중 하나로 unbounded weight norm growth가 제시되어 왔습니다. 이를 효과적으로 완화하기 위한 가중치 규제 기법 SWR (Soft Weight Rescaling)을 제안하고 이를 continual learning 환경에서 검증합니다. SWR은 VGG-16 같은 거대 비전 모델에서 특히 가소성을 잘 유지하는 모습을 보였습니다.',
+        'summary-smart-insole': '발바닥 압력만으로 사람의 3D 자세를 예측하는 방법을 제안했습니다. 기존의 tactile pose estimation은 주로 바닥 센서처럼 설치된 공간 안에서만 동작하는 한계가 있었는데, 이를 무선 스마트 인솔 형태로 구현해 장소에 구애받지 않고 사용할 수 있도록 했습니다. 또한 실제 수집한 발 압력 데이터와 영상 기반 label을 함께 활용해, 스마트 인솔만으로도 사람의 자세와 동작을 꽤 정확하게 추정할 수 있음을 보였습니다.',
+      }
+    };
+
+    let currentLang = localStorage.getItem('lang') || 'en';
+
+    function applyLanguage(lang) {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key] !== undefined) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+      document.getElementById('lang-toggle').textContent = lang === 'en' ? 'Korean' : 'English';
+      document.documentElement.lang = lang === 'en' ? 'en' : 'ko';
+      localStorage.setItem('lang', lang);
+      currentLang = lang;
+    }
+
+    document.getElementById('lang-toggle').addEventListener('click', function() {
+      applyLanguage(currentLang === 'en' ? 'ko' : 'en');
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        applyLanguage(currentLang);
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const publications = document.querySelectorAll('.publication-entry');
+        
+        // Function to apply filtering
+        function applyFilter(filterValue) {
+          // Remove active class from all buttons
+          filterBtns.forEach(btn => btn.classList.remove('active'));
+          
+          // Add active class to the button with matching data-filter
+          const activeBtn = document.querySelector(`.filter-btn[data-filter="${filterValue}"]`);
+          if (activeBtn) {
+            activeBtn.classList.add('active');
+          }
+          
+          // Show/hide publications based on filter
+          if (filterValue === 'selected') {
+            publications.forEach(pub => {
+              if (pub.classList.contains('selected-publication')) {
+                pub.classList.remove('hidden');
+              } else {
+                pub.classList.add('hidden');
+              }
+            });
+          } else if (filterValue === 'all') {
+            publications.forEach(pub => pub.classList.remove('hidden'));
+          }
+        }
+        
+        // Add click event listeners to filter buttons
+        filterBtns.forEach(btn => {
+          btn.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
+            applyFilter(filter);
+          });
+        });
+
+        // Summary toggle handlers
+        document.querySelectorAll('.summary-toggle').forEach(btn => {
+          btn.addEventListener('click', function() {
+            const content = this.parentElement.querySelector('.summary-content');
+            if (content) {
+              content.classList.toggle('open');
+              this.classList.toggle('open');
+            }
+          });
+        });
+        
+        // Apply the "selected" filter by default on page load
+        applyFilter('selected');
+      });
+  </script>
+</body>
